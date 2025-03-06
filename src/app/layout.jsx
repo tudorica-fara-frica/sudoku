@@ -22,7 +22,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`antialiased w-screen h-screen ${danfo} ${gaegu}`}>
+      {/* <body className={`antialiased w-screen h-screen ${danfo} ${gaegu}`}> */}
+      <body className={`antialiased w-dvw h-dvh ${danfo} ${gaegu}`}>
         {children}
       </body>
     </html>

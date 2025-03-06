@@ -61,14 +61,18 @@ export default function Grid({ grid, solution, diff }) {
   return (
     <>
       <Toaster containerClassName="text-lg" />
-      <p className="text-lg">{diff}</p>
-      <div className="flex flex-col gap-1 border size-fit p-2 rounded-md bg-indigo-900">
+      <p className="text-xl">{diff}</p>
+      <div className="flex flex-col gap-1 border size-fit p-1 sm:p-2 rounded-md bg-indigo-900">
         {gridCopy.map((line, index) => (
           <div key={index} className="flex flex-row gap-1">
             {line.map((item, i) => (
               <input
-                className={`rounded-sm bg-transparent text-2xl size-12 place-items-center border-white focus:outline-0 disabled:text-blue-500 disabled:bg-indigo-950
-                ${item === 0 ? "text-lg" : "text-amber-500 font-semibold"}
+                className={`rounded-sm bg-transparent text-lg sm:text-2xl size-8 sm:size-12 place-items-center border-white focus:outline-0 disabled:text-blue-500 disabled:bg-indigo-950
+                ${
+                  item === 0
+                    ? "text-sm sm:text-lg"
+                    : "text-amber-500 font-semibold"
+                }
                 ${i % 3 === 0 && i !== 0 ? "border-l-4" : ""} 
                 ${index % 3 === 2 && index !== 8 ? "border-b-4" : ""}
                 `}
